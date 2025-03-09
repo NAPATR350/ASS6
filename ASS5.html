@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASS5</title>
+</head>
+<body>
+	<p>
+	Two elite snipers receive identical missions: travel to a secret location and guard the west and east sides of a deep gorge for one year without any contact with the outside world or their counterparts on the opposite sides. Levi Kane, a former U.S. Marine Scout/Sniper and current private contractor agrees to guard the west tower. Drasa, a Lithuanian covert operative frequently employed by the Kremlin, guards the east side. Levi suffers from nightmares stemming from the guilt he has from killing enemies, while Drasa's father, Erikas, plans to suicide on Valentine's Day to reunite with his late wife.
+	</p>
+
+	<p id="USP"></p>
+	<p id="NOTHE"></p>
+	<p id="RP"></p>
+
+	<script>
+
+	let text = `Two elite snipers receive identical missions: travel to a secret location and guard the west and east sides of a deep gorge for one year without any contact with the outside world or their counterparts on the opposite sides. Levi Kane, a former U.S. Marine Scout/Sniper and current private contractor agrees to guard the west tower. Drasa, a Lithuanian covert operative frequently employed by the Kremlin, guards the east side. Levi suffers from nightmares stemming from the guilt he has from killing enemies, while Drasa's father, Erikas, plans to suicide on Valentine's Day to reunite with his late wife.`;
+
+	//1    
+	let USP = text.indexOf("U.S.");
+	document.getElementById("USP").textContent = "U.S. is at" + USP;
+
+	//2
+	let AMTHE = 0;
+	let wd = text.split(/\s/);
+	for (let i = 0; i < wd.length; i++) 
+		{
+		if (wd[i]=== "the") 
+			{
+        		AMTHE++;
+      			}
+    		}
+	document.getElementById("NOTHE").textContent = "Amount of THE: " + AMTHE;
+
+	//3
+ 	let RP = text.replace(/Drasa/g, "actress");
+    	document.getElementById("RP").textContent = RP;
+	</script>
+</body>
+</html>
+
